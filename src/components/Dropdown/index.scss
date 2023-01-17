@@ -1,0 +1,66 @@
+@use "../../styles/colors";
+@use "../../styles/rounded";
+
+.dropdown {
+  position: relative;
+  width: 580px;
+  &__header {
+    z-index: 3;
+    position: relative;
+    border-radius: rounded.$radius-sm;
+    background-color: map-get(colors.$colors, primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: map-get(colors.$colors, text-light);
+    padding: 13px 20px;
+    cursor: pointer;
+
+    img {
+      transition: transform 300ms ease-in-out;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin-top: -5px;
+    z-index: 1;
+    background-color: map-get(colors.$colors, secondary);
+    color: map-get(colors.$colors, primary);
+    max-height: 0;
+    padding: 0 27px 0 20px;
+    overflow: hidden;
+    transition: max-height 550ms ease-in-out, padding 450ms 100ms ease-in-out;
+    border-bottom-left-radius: rounded.$radius-sm;
+    border-bottom-right-radius: rounded.$radius-sm;
+    font-size: 24px;
+    line-height: 34px;
+
+    li {
+      line-height: initial;
+      font-size: 18px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+
+  &--lg {
+    width: 1023px;
+    &--content {
+      font-size: 24px;
+    }
+  }
+
+  &.active {
+    .dropdown__header {
+      img {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .dropdown__content {
+      max-height: 1200px;
+      padding: 20px 27px 20px 20px;
+    }
+  }
+}
