@@ -1,0 +1,14 @@
+@use "../../styles/colors";
+@use "../../styles/rounded";
+
+.tag {
+  display: inline-block;
+  text-align: center;
+  color: map-get(colors.$colors, text-light);
+  background-color: map-get(colors.$colors, primary);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: rounded.$radius;
+  min-width: 115px;
+  font-size: 14px;
+}
