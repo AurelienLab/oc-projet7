@@ -1,4 +1,6 @@
 @use "styles/typo";
+@import "styles/reset";
+
 
 body {
   @include typo.mainTypo;
