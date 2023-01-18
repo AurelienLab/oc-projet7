@@ -30,7 +30,7 @@
     max-height: 0;
     padding: 0 27px 0 20px;
     overflow: hidden;
-    transition: max-height 550ms ease-in-out, padding 450ms 100ms ease-in-out;
+    transition: max-height 600ms ease-in-out, padding 800ms ease-in-out;
     border-bottom-left-radius: rounded.$radius-sm;
     border-bottom-right-radius: rounded.$radius-sm;
     font-size: 24px;
@@ -59,7 +59,7 @@
     }
 
     .dropdown__content {
-      max-height: 1200px;
+      max-height: 600px;
       padding: 20px 27px 20px 20px;
     }
   }
