@@ -8,10 +8,10 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 import MenuItem from "./components/Header/MenuItem";
 import Home from "./pages/Home";
-import Dropdown from "./components/Dropdown";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import Error404 from "./pages/404";
+import Apartment from "./pages/Apartment";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,8 +24,9 @@ root.render(
           </Header>
           <Routes>
               <Route path={"/"} index element={<Home/>}/>
-              <Route path={"/about"} index element={<About/>}/>
-              <Route path={"/dev"} index element={<DevComponents/>}/>
+              <Route path={"/about"} element={<About/>}/>
+              <Route path={"/dev"} element={<DevComponents/>}/>
+              <Route path={"/appartement/:id"} element={<Apartment/>}/>
               <Route path="*" element={<Error404 />} />
           </Routes>
           <Footer/>

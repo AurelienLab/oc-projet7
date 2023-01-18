@@ -8,6 +8,8 @@
   background-color: map-get(colors.$colors, primary);
   padding-top: 3px;
   padding-bottom: 3px;
+  padding-right: 27px;
+  padding-left: 27px;
   border-radius: rounded.$radius;
   min-width: 115px;
   font-size: 0.8rem;

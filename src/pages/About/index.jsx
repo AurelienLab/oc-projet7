@@ -1,7 +1,9 @@
+import './index.scss'
+
 import MainHeading from "../../components/MainHeading";
+import Dropdown from "../../components/Dropdown";
 
 import headingBackground from './heading_bg.png'
-import Dropdown from "../../components/Dropdown";
 
 function About() {
     return (
