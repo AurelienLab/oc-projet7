@@ -1,6 +1,5 @@
-@use "../../styles/colors";
-@use "../../styles/rounded";
-
+@use "src/styles/colors";
+@use "src/styles/rounded";
 .dropdown {
   position: relative;
   width: 580px;
@@ -33,12 +32,10 @@
     transition: max-height 600ms ease-in-out, padding 800ms ease-in-out;
     border-bottom-left-radius: rounded.$radius-sm;
     border-bottom-right-radius: rounded.$radius-sm;
-    font-size: 24px;
     line-height: 34px;
 
     li {
       line-height: initial;
-      font-size: 18px;
       padding-top: 4px;
       padding-bottom: 4px;
     }
@@ -46,8 +43,11 @@
 
   &--lg {
     width: 1023px;
-    &--content {
-      font-size: 24px;
+    .dropdown__header {
+      font-size: 1.3rem;
+    }
+    .dropdown__content {
+      font-size: 1.3rem;
     }
   }
 

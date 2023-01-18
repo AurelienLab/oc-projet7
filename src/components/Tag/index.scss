@@ -1,5 +1,5 @@
-@use "../../styles/colors";
-@use "../../styles/rounded";
+@use "src/styles/colors";
+@use "src/styles/rounded";
 
 .tag {
   display: inline-block;
@@ -10,5 +10,5 @@
   padding-bottom: 3px;
   border-radius: rounded.$radius;
   min-width: 115px;
-  font-size: 14px;
+  font-size: 0.8rem;
 }

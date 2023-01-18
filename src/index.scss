@@ -7,8 +7,17 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-left: 100px;
-  padding-right: 100px;
+  font-size: 18px;
+}
+
+header {
+  width: 86%;
+  margin: auto;
+}
+
+main {
+  width: 86%;
+  margin: auto;
 }
 
 code {

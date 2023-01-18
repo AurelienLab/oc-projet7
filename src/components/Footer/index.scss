@@ -1,4 +1,4 @@
-@use '../../styles/colors';
+@use 'src/styles/colors';
 
 .footer {
   width: 100%;
@@ -11,7 +11,7 @@
   padding: 29px;
   p {
     color: map-get(colors.$colors, text-light);
-    font-size: 24px;
+    font-size: 1.3rem;
   }
 
   .logo {

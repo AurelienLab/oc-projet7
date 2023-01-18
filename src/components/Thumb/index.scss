@@ -1,5 +1,5 @@
-@use "../../styles/colors";
-@use "../../styles/rounded";
+@use "src/styles/colors";
+@use "src/styles/rounded";
 
 .thumb {
   position: relative;
@@ -34,6 +34,5 @@
   h2 {
     z-index: 2;
     color: map-get(colors.$colors, text-light);
-    font-size: 18px;
   }
 }

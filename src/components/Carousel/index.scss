@@ -1,5 +1,5 @@
-@use "../../styles/rounded";
-@use "../../styles/colors";
+@use "src/styles/colors";
+@use "src/styles/rounded";
 
 .carousel {
   z-index: 1;
@@ -56,7 +56,6 @@
   .index {
     z-index: 2;
     color: map-get(colors.$colors, text-light);
-    font-size: 18px;
     margin-bottom: 25px;
   }
 }
