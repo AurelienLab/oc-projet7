@@ -10,6 +10,7 @@ import MenuItem from "./components/Header/MenuItem";
 import Home from "./pages/Home";
 import Dropdown from "./components/Dropdown";
 import About from "./pages/About";
+import Footer from "./components/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
               <Route path={"/"} index element={<Home/>}/>
               <Route path={"/about"} index element={<About/>}/>
           </Routes>
+          <Footer/>
       </BrowserRouter>
 
   </React.StrictMode>
