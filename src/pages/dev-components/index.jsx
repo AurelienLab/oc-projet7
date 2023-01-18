@@ -2,10 +2,16 @@ import Tag from '../../components/Tag'
 import Thumb from "../../components/Thumb";
 import Dropdown from "../../components/Dropdown";
 import Carousel from "../../components/Carousel";
+import Header from "../../components/Header";
+import MenuItem from "../../components/Header/MenuItem";
 
 function DevComponents() {
     return (
         <>
+            <Header>
+                <MenuItem path="about" name="A propos"/>
+                <MenuItem path="home" name="Home"/>
+            </Header>
             <p>.TAG</p>
             <Tag name={"Tag name"} />
             <br/>
