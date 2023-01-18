@@ -2,7 +2,9 @@
 @use "src/styles/rounded";
 .dropdown {
   position: relative;
-  width: 580px;
+  max-width: 580px;
+  width: 100%;
+  margin: 31px auto;
   &__header {
     z-index: 3;
     position: relative;
@@ -42,7 +44,7 @@
   }
 
   &--lg {
-    width: 1023px;
+    max-width: 1023px;
     .dropdown__header {
       font-size: 1.3rem;
     }

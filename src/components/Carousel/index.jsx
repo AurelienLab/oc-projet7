@@ -16,6 +16,8 @@ function Carousel({images}) {
         setCurrentImage(newIndex)
     }
 
+    // setInterval(goNext, 3000)
+
     return (
         <div className={`carousel`}>
             {images.map((url, index) => {

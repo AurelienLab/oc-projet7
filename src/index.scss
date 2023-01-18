@@ -10,12 +10,8 @@ body {
   font-size: 18px;
 }
 
-header {
-  width: 86%;
-  margin: auto;
-}
-
-main {
+header, main {
+  max-width: 1240px;
   width: 86%;
   margin: auto;
 }

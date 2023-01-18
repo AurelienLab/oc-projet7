@@ -3,8 +3,8 @@ import {useState} from "react";
 
 import chevron from './chevron.svg'
 
-function Dropdown({title, content, size}) {
-    const [isOpen, setIsOpen] = useState(false)
+function Dropdown({title, content, size, defaultOpen}) {
+    const [isOpen, setIsOpen] = useState(defaultOpen)
 
     //If array passed, transform it into list
     if(Array.isArray(content)) {
