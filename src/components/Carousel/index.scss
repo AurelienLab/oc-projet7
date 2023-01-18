@@ -1,0 +1,62 @@
+@use "../../styles/rounded";
+@use "../../styles/colors";
+
+.carousel {
+  z-index: 1;
+  position: relative;
+  width: 1240px;
+  height: 415px;
+  overflow: hidden;
+  border-radius: rounded.$radius-lg;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+
+  .carousel__item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 500ms ease-in-out;
+    opacity: 0;
+    &.currentImg {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    &.previousImg {
+      transition: transform 500ms ease-in-out, opacity 10ms 500ms ease-in-out;
+      transform: translateX(-100%);
+    }
+    &.nextImg {
+      transition: transform 500ms ease-in-out, opacity 10ms 500ms ease-in-out;
+      transform: translateX(100%);
+    }
+  }
+
+  .arrow {
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    height: 80px;
+    width: 47px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.next {
+      right: 25px;
+    }
+    &.previous {
+      left: 25px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  .index {
+    z-index: 2;
+    color: map-get(colors.$colors, text-light);
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+}
