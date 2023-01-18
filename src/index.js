@@ -4,11 +4,27 @@ import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
 import DevComponents from './pages/dev-components'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Header from "./components/Header";
+import MenuItem from "./components/Header/MenuItem";
+import Home from "./pages/Home";
+import Dropdown from "./components/Dropdown";
+import About from "./pages/About";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DevComponents/>
+      <BrowserRouter>
+          <Header>
+              <MenuItem path={"/"} name={"Home"}/>
+              <MenuItem path={"about"} name={"A propos"}/>
+          </Header>
+          <Routes>
+              <Route path={"/"} index element={<Home/>}/>
+              <Route path={"/about"} index element={<About/>}/>
+          </Routes>
+      </BrowserRouter>
+
   </React.StrictMode>
 );
 

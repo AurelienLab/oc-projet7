@@ -1,6 +1,13 @@
 @use "../../../styles/colors";
 
 .nav__item {
-  color: map-get(colors.$colors, primary);
-  font-size: 24px;
+  a {
+    color: map-get(colors.$colors, primary);
+    font-size: 24px;
+    text-decoration: none;
+    &:hover, &.active {
+      text-decoration: underline;
+    }
+  }
+
 }
