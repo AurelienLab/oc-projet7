@@ -1,0 +1,67 @@
+@use "src/styles/colors";
+@use "src/styles/rounded";
+.dropdown {
+  position: relative;
+  max-width: 580px;
+  width: 100%;
+  &__header {
+    z-index: 3;
+    position: relative;
+    border-radius: rounded.$radius-sm;
+    background-color: map-get(colors.$colors, primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: map-get(colors.$colors, text-light);
+    padding: 13px 20px;
+    cursor: pointer;
+
+    img {
+      transition: transform 300ms ease-in-out;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin-top: -5px;
+    z-index: 1;
+    background-color: map-get(colors.$colors, secondary);
+    color: map-get(colors.$colors, primary);
+    max-height: 0;
+    padding: 0 27px 0 20px;
+    overflow: hidden;
+    transition: max-height 600ms ease-in-out, padding 800ms ease-in-out;
+    border-bottom-left-radius: rounded.$radius-sm;
+    border-bottom-right-radius: rounded.$radius-sm;
+    line-height: 34px;
+
+    li {
+      line-height: initial;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+
+  &--lg {
+    max-width: 1023px;
+    .dropdown__header {
+      font-size: 1.3rem;
+    }
+    .dropdown__content {
+      font-size: 1.3rem;
+    }
+  }
+
+  &.active {
+    .dropdown__header {
+      img {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .dropdown__content {
+      max-height: 600px;
+      padding: 20px 27px 20px 20px;
+    }
+  }
+}

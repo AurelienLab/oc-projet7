@@ -1,0 +1,66 @@
+@use 'src/styles/colors';
+
+.apartment {
+
+  &__taglist {
+    display: flex;
+    flex-direction: row;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  &__informations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 24px;
+    color: map-get(colors.$colors, primary);
+
+    &__apartment {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h1 {
+        font-size: 2rem;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      address {
+        font-style: normal;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+
+    span {
+      text-align: right;
+      white-space: pre-line;
+    }
+
+    &__picture {
+      width: 64px;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      margin-left: 10px;
+    }
+  }
+
+  &__dropdowns {
+    margin-top: 24px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

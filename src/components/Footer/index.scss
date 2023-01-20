@@ -1,0 +1,23 @@
+@use 'src/styles/colors';
+
+.footer {
+  width: 100%;
+  height: 209px;
+  background-color: map-get(colors.$colors, background-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 29px;
+  p {
+    color: map-get(colors.$colors, text-light);
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+}

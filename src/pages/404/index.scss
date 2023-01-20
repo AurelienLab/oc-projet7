@@ -1,0 +1,26 @@
+@use "src/styles/colors";
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: map-get(colors.$colors, primary);
+
+  h1 {
+    font-weight: bold;
+    font-size: 16rem;
+  }
+
+  p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 66px auto;
+  }
+
+  a {
+    color: map-get(colors.$colors, primary);
+    margin: 100px auto;
+  }
+
+}
