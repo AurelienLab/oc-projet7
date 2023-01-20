@@ -13,12 +13,12 @@ function Rating({value}) {
     }
     let j = 0
     return (
-        <>
+        <div className={"rating"}>
             {stars.map((value) => {
                 j++
                 return <img src={value} key={`star-${j}`} className={"rating-star"} />
             })}
-        </>
+        </div>
     )
 }
 
