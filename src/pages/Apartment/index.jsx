@@ -29,7 +29,7 @@ function Apartment() {
     return (
         hasError ? <Error404/> : apartment && (
             <main className={"apartment"}>
-                <Carousel images={apartment.pictures} />
+                <Carousel images={apartment.pictures} apartmentId={apartment.id} />
                 <div className={"apartment__informations"}>
                     <div className={"apartment__informations__apartment"}>
                         <h1>{apartment.title}</h1>
@@ -44,7 +44,7 @@ function Apartment() {
                             <img src={apartment.host.picture} alt={`Photo de profil de ${apartment.host.name}`} className={'apartment__host__picture'}/>
                         </div>
                         <div className={"apartment__rating"}>
-                            <Rating value={2}/>
+                            <Rating value={apartment.rating}/>
                         </div>
                     </div>
                 </div>

@@ -7,9 +7,14 @@ function Dropdown({title, content, size, defaultOpen}) {
     const [isOpen, setIsOpen] = useState(defaultOpen)
 
     //If array passed, transform it into list
+
     if(Array.isArray(content)) {
+        let i = 0
         content = (<ul>
-            {content.map((value) => (<li>{value}</li>))}
+            {content.map((value) => {
+                i++
+                return <li key={`dd-list-${i}`}>{value}</li>
+            })}
         </ul>)
     }
 

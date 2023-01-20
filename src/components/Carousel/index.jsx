@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 
 import chevron from './chevron.svg'
 
-function Carousel({images}) {
+function Carousel({images,apartmentId}) {
     const [currentImage, setCurrentImage] = useState(0)
     const [isPaused, setIsPaused] = useState(false)
     const [intervalId, setIntervalId] = useState(null)
@@ -55,7 +55,7 @@ function Carousel({images}) {
                     }
                 }
 
-                return(<img src={url} className={`carousel__item ${imageClass}`} />)
+                return(<img src={url} key={`${apartmentId}-img${index}`} className={`carousel__item ${imageClass}`} />)
             })}
             {images.length > 1 &&
                 <>

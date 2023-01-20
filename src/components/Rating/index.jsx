@@ -11,9 +11,13 @@ function Rating({value}) {
     for(let i = 1; i <= 5; i++) {
         stars.push(i <= value ? starOn : starOff)
     }
+    let j = 0
     return (
         <>
-            {stars.map((value) => <img src={value} className={"rating-star"} />)}
+            {stars.map((value) => {
+                j++
+                return <img src={value} key={`star-${j}`} className={"rating-star"} />
+            })}
         </>
     )
 }
