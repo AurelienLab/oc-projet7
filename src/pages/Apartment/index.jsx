@@ -23,7 +23,7 @@ function Apartment() {
                 }
                 setApartment(result[0])
             })
-    }, [])
+    }, [id])
 
 
     return (
@@ -41,7 +41,7 @@ function Apartment() {
                     <div className={"apartment__informations__host"}>
                         <div className={"apartment__host"}>
                             <span>{apartment.host.name.replaceAll(' ', '\n')}</span>
-                            <img src={apartment.host.picture} alt={`Photo de profil de ${apartment.host.name}`} className={'apartment__host__picture'}/>
+                            <img src={apartment.host.picture} alt={`Profil de ${apartment.host.name}`} className={'apartment__host__picture'}/>
                         </div>
                         <div className={"apartment__rating"}>
                             <Rating value={apartment.rating}/>

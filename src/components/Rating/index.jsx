@@ -16,7 +16,7 @@ function Rating({value}) {
         <div className={"rating"}>
             {stars.map((value) => {
                 j++
-                return <img src={value} key={`star-${j}`} className={"rating-star"} />
+                return <img src={value} key={`star-${j}`} className={"rating-star"} alt={""}/>
             })}
         </div>
     )

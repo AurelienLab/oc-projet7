@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
-import DevComponents from './pages/dev-components'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 import MenuItem from "./components/Header/MenuItem";
@@ -20,12 +19,10 @@ root.render(
           <Header>
               <MenuItem path={"/"} name={"Home"}/>
               <MenuItem path={"about"} name={"A propos"}/>
-              <MenuItem path={"dev"} name={"Dev"}/>
           </Header>
           <Routes>
               <Route path={"/"} index element={<Home/>}/>
               <Route path={"/about"} element={<About/>}/>
-              <Route path={"/dev"} element={<DevComponents/>}/>
               <Route path={"/appartement/:id"} element={<Apartment/>}/>
               <Route path="*" element={<Error404 />} />
           </Routes>

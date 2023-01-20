@@ -4,7 +4,6 @@ import MainHeading from "../../components/MainHeading";
 import headingBackground from './heading_bg.png'
 import Thumb from "../../components/Thumb";
 import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
 
 function Home() {
     const [apartments, setApartments] = useState([])
@@ -22,7 +21,7 @@ function Home() {
                 })
         }
 
-    }, [])
+    }, [apartments])
 
     return (
         <main className={"home"}>

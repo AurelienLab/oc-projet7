@@ -6,7 +6,6 @@ import chevron from './chevron.svg'
 function Carousel({images,apartmentId}) {
     const [currentImage, setCurrentImage] = useState(0)
     const [isPaused, setIsPaused] = useState(false)
-    const [intervalId, setIntervalId] = useState(null)
 
     const goPrevious = () => {
         const newIndex = currentImage === 0 ? images.length-1 : currentImage-1
@@ -55,12 +54,12 @@ function Carousel({images,apartmentId}) {
                     }
                 }
 
-                return(<img src={url} key={`${apartmentId}-img${index}`} className={`carousel__item ${imageClass}`} />)
+                return(<img src={url} alt={""} key={`${apartmentId}-img${index}`} className={`carousel__item ${imageClass}`} />)
             })}
             {images.length > 1 &&
                 <>
-                    <span className={"arrow next"} onClick={goNext}><img src={chevron}/></span>
-                    <span className={"arrow previous"} onClick={goPrevious} ><img src={chevron}/></span>
+                    <span className={"arrow next"} onClick={goNext}><img alt={"fleche à doite"} src={chevron}/></span>
+                    <span className={"arrow previous"} onClick={goPrevious} ><img alt={"fleche à gauche"} src={chevron}/></span>
                     <span className={"index"}>{currentImage+1}/{images.length}</span>
                 </>
 
