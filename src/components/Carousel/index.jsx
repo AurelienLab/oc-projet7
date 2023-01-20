@@ -18,16 +18,16 @@ function Carousel({images}) {
         setCurrentImage(newIndex)
     }
 
-    // useEffect(() => {
-    //     return setIntervalId(setInterval(goNext, 3000))
-    // }, [])
-    //
-    // useEffect(() => {
-    //     if(!isPaused) return setIntervalId(setInterval(goNext, 3000))
-    //     else return clearInterval(intervalId)
-    //
-    // }, [isPaused])
+    const carouselAction = () => {
+        if(!isPaused) {
+            goNext()
+        }
+    }
 
+    useEffect(() => {
+        const interval = setInterval(carouselAction, 3000)
+        return () => clearInterval(interval)
+    })
 
     return (
         <div className={`carousel`} onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
