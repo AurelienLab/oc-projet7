@@ -1,10 +1,19 @@
 @use "src/styles/colors";
 @use "src/styles/rounded";
+@use "src/styles/responsive";
+
 .dropdown {
   position: relative;
   max-width: 580px;
   width: 100%;
   &__header {
+    @include responsive.mobile-only{
+      padding: 6px 12px;
+      font-size: 0.7rem;
+      h3 {
+        align-self: center;
+      }
+    }
     z-index: 3;
     position: relative;
     border-radius: rounded.$radius-sm;
@@ -17,11 +26,18 @@
     cursor: pointer;
 
     img {
+      @include responsive.mobile-only {
+        transform: scale(0.6);
+      }
       transition: transform 300ms ease-in-out;
     }
   }
 
   &__content {
+    @include responsive.mobile-only {
+      font-size: 0.65rem;
+      line-height: 0.9rem;
+    }
     position: relative;
     margin-top: -5px;
     z-index: 1;
@@ -36,6 +52,10 @@
     line-height: 34px;
 
     li {
+      @include responsive.mobile-only {
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
       line-height: initial;
       padding-top: 4px;
       padding-bottom: 4px;
@@ -45,9 +65,20 @@
   &--lg {
     max-width: 1023px;
     .dropdown__header {
+      @include responsive.mobile-only {
+        height: 30px;
+        h3 {
+          font-size: 0.7rem;
+          align-self: center;
+        }
+      }
       font-size: 1.3rem;
     }
     .dropdown__content {
+      @include responsive.mobile-only {
+        font-size: 0.65rem;
+        line-height: 0.94rem;
+      }
       font-size: 1.3rem;
     }
   }
@@ -55,6 +86,9 @@
   &.active {
     .dropdown__header {
       img {
+        @include responsive.mobile-only {
+          transform: scale(0.6) rotate(-180deg)
+        }
         transform: rotate(-180deg);
       }
     }

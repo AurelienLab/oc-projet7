@@ -1,7 +1,11 @@
 @use "src/styles/colors";
 @use "src/styles/rounded";
+@use "src/styles/responsive";
 
 .carousel {
+  @include responsive.mobile-only {
+    height: 255px;
+  }
   z-index: 1;
   position: relative;
   width: 100%;
@@ -36,6 +40,9 @@
   }
 
   .arrow {
+    @include responsive.mobile-only {
+      transform: translateY(-50%) scale(0.25) ;
+    }
     z-index: 2;
     cursor: pointer;
     position: absolute;
@@ -45,15 +52,27 @@
     transform: translateY(-50%);
 
     &.next {
+      @include responsive.mobile-only {
+        right: 6px;
+        transform-origin: right;
+      }
       right: 25px;
     }
     &.previous {
+      @include responsive.mobile-only {
+        transform: translateY(-50%) rotate(180deg) scale(0.25);
+        transform-origin: left;
+        left: 18px;
+      }
       left: 25px;
       transform: translateY(-50%) rotate(180deg);
     }
   }
 
   .index {
+    @include responsive.mobile-only {
+      display: none;
+    }
     z-index: 2;
     color: map-get(colors.$colors, text-light);
     margin-bottom: 25px;

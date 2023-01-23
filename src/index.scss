@@ -1,4 +1,5 @@
 @use "styles/typo";
+@use "styles/responsive";
 @import "styles/reset";
 
 
@@ -11,6 +12,9 @@ body {
 }
 
 header, main {
+  @include responsive.mobile-only {
+    width: 90%;
+  }
   max-width: 1240px;
   width: 86%;
   margin: auto;
