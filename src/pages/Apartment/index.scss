@@ -6,9 +6,10 @@
   &__taglist {
     display: flex;
     flex-direction: row;
-
+    flex-wrap: wrap;
     span {
       margin-right: 10px;
+      margin-bottom: 5px;
     }
   }
 
