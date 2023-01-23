@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 function Thumb({title, image, altText, id}) {
     return (
-        <Link to={`appartement/${id}`} className={"thumb"}>
+        <Link to={`/appartement/${id}`} className={"thumb"}>
             <article>
                 <img src={image} alt={altText}/>
                 <div className={"overlay"}/>

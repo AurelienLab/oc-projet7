@@ -21,7 +21,7 @@ root.render(
               <MenuItem path={"about"} name={"A propos"}/>
           </Header>
           <Routes>
-              <Route path={"/"} index element={<Home/>}/>
+              <Route path={"/:page?"} index element={<Home/>}/>
               <Route path={"/about"} element={<About/>}/>
               <Route path={"/appartement/:id"} element={<Apartment/>}/>
               <Route path="*" element={<Error404 />} />
