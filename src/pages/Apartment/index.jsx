@@ -49,8 +49,8 @@ function Apartment() {
                     </div>
                 </div>
                 <div className={"apartment__dropdowns"}>
-                    <Dropdown content={apartment.description} title={"Description"} defaultOpen={true}/>
-                    <Dropdown content={apartment.equipments} title={"Equipements"} defaultOpen={true}/>
+                    <Dropdown content={apartment.description} title={"Description"} />
+                    <Dropdown content={apartment.equipments} title={"Equipements"} />
                 </div>
             </main>
         )
