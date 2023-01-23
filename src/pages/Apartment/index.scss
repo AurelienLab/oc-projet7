@@ -93,9 +93,10 @@
     @include responsive.mobile-only {
       flex-direction: column;
       gap: 20px;
+      width: fit-content;
     }
-    margin-top: 24px;
-    margin-bottom: 25px;
+    gap: 70px;
+    margin: 24px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
