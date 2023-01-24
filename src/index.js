@@ -21,7 +21,8 @@ root.render(
               <MenuItem path={"about"} name={"A propos"}/>
           </Header>
           <Routes>
-              <Route path={"/:page?"} index element={<Home/>}/>
+              {/*https://reactrouter.com/en/6.7.0/start/faq#what-happened-to-regexp-routes-paths*/}
+              <Route path={"/"} index element={<Home/>}/>
               <Route path={"/about"} element={<About/>}/>
               <Route path={"/appartement/:id"} element={<Apartment/>}/>
               <Route path="*" element={<Error404 />} />
