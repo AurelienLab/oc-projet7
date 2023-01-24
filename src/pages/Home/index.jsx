@@ -5,10 +5,11 @@ import headingBackground from './heading_bg.png'
 import Thumb from "../../components/Thumb";
 import {useEffect, useState} from "react";
 import Pagination from "../../components/Pagination";
-import {useSearchParams} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
 
 function Home() {
-    const [searchParams, setSearchParams] = useSearchParams()
+    const navigate = useNavigate()
+    const searchParams = useSearchParams()[0]
     const page = searchParams.get('page')
     const [apartments, setApartments] = useState([])
     const [nbPages, setNbPages] = useState(0)
@@ -50,9 +51,12 @@ function Home() {
                     setNbPages(nbPages)
                     setCurrentPage(() => initialPage(page, nbPages))
                 })
+                .catch(() => {
+                    navigate('/error')
+                })
         }
 
-    }, [apartments])
+    }, [apartments, page, navigate])
 
     return (
         <main className={"home"}>
