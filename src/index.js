@@ -17,11 +17,10 @@ root.render(
   <React.StrictMode>
       <BrowserRouter>
           <Header>
-              <MenuItem path={"/"} name={"Home"}/>
+              <MenuItem path={"/"} name={"Accueil"}/>
               <MenuItem path={"about"} name={"A propos"}/>
           </Header>
           <Routes>
-              {/*https://reactrouter.com/en/6.7.0/start/faq#what-happened-to-regexp-routes-paths*/}
               <Route path={"/"} index element={<Home/>}/>
               <Route path={"/about"} element={<About/>}/>
               <Route path={"/appartement/:id"} element={<Apartment/>}/>

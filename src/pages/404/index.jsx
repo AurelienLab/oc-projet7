@@ -1,7 +1,9 @@
 import './index.scss'
 import {Link} from "react-router-dom";
+import {useDocumentTitle} from "../../utils/hooks";
 
 function Error404() {
+    useDocumentTitle('Page introuvable')
     return (
         <main className={"error"}>
             <h1>404</h1>

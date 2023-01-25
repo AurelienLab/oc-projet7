@@ -1,4 +1,5 @@
 import './index.scss'
+import { useDocumentTitle } from "../../utils/hooks";
 import MainHeading from "../../components/MainHeading";
 
 import headingBackground from './heading_bg.png'
@@ -8,6 +9,7 @@ import Pagination from "../../components/Pagination";
 import {useNavigate, useSearchParams} from "react-router-dom";
 
 function Home() {
+    useDocumentTitle('Accueil')
     const navigate = useNavigate()
     const searchParams = useSearchParams()[0]
     const page = searchParams.get('page')

@@ -7,11 +7,15 @@ import Carousel from "../../components/Carousel";
 import Tag from "../../components/Tag";
 import Dropdown from "../../components/Dropdown";
 import Rating from "../../components/Rating";
+import {useDocumentTitle} from "../../utils/hooks";
 
 function Apartment() {
+
     const {id} = useParams();
     const [hasError, setHasError] = useState(false)
     const [apartment, setApartment] = useState(null)
+
+    useDocumentTitle(apartment ? apartment.title : "Appartement")
 
     useEffect(() => {
         fetch('/data/apartments.json')

@@ -4,8 +4,10 @@ import MainHeading from "../../components/MainHeading";
 import Dropdown from "../../components/Dropdown";
 
 import headingBackground from './heading_bg.png'
+import {useDocumentTitle} from "../../utils/hooks";
 
 function About() {
+    useDocumentTitle('A propos')
     return (
         <main className={"about"}>
             <MainHeading img={headingBackground} altText={"Décors de montagnes enneigées"}/>
