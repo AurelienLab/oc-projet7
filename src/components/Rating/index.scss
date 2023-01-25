@@ -1,3 +1,5 @@
+@use 'src/styles/responsive';
+
 .rating {
   display: flex;
   flex-direction: row;
@@ -5,5 +7,9 @@
 }
 
 .rating-star {
+  @include responsive.mobile-only {
+    width: 15px;
+    margin-left: 5px;
+  }
   margin-left: 10px;
 }

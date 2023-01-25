@@ -1,4 +1,5 @@
 import './index.scss'
+
 import {useState} from "react";
 
 import chevron from './chevron.svg'
@@ -21,7 +22,7 @@ function Dropdown({title, content, size, defaultOpen}) {
     return (
         <div className={`dropdown ${isOpen && 'active'} ${size === 'large' && 'dropdown--lg'}`}>
             <div className={"dropdown__header"} onClick={() => setIsOpen(!isOpen)}>
-                <h3>{title}</h3>
+                <h2 className={"dropdown__heading"}>{title}</h2>
                 <img src={chevron} alt={isOpen ? "Flêche vers le haut": "Flêche vers le bas"}/>
             </div>
             <div className={"dropdown__content"}>

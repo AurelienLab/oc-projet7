@@ -17,7 +17,7 @@ root.render(
   <React.StrictMode>
       <BrowserRouter>
           <Header>
-              <MenuItem path={"/"} name={"Home"}/>
+              <MenuItem path={"/"} name={"Accueil"}/>
               <MenuItem path={"about"} name={"A propos"}/>
           </Header>
           <Routes>

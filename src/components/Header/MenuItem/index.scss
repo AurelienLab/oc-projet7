@@ -1,7 +1,12 @@
 @use "src/styles/colors";
+@use "src/styles/responsive";
 
 .nav__item {
   a {
+    @include responsive.mobile-only {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
     color: map-get(colors.$colors, primary);
     font-size: 1.3rem;
     text-decoration: none;

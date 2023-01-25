@@ -1,4 +1,4 @@
-import './index.scss'
+import './index.scss';
 
 function Tag({name}) {
     return (

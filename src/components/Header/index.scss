@@ -1,4 +1,13 @@
+@use "src/styles/responsive";
+
 .header {
+  @include responsive.mobile-only {
+    padding-top: 20px;
+    padding-bottom: 16px;
+    img {
+      width: 9rem;
+    }
+  }
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -6,6 +15,9 @@
   padding-top: 40px;
   padding-bottom: 63px;
   nav ul {
+    @include responsive.mobile-only {
+      gap: 15px;
+    }
     display: flex;
     flex-direction: row;
     gap: 60px;

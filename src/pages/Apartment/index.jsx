@@ -1,7 +1,9 @@
-import './index.scss'
+import './index.scss';
 
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {useDocumentTitle} from "../../utils/hooks";
+
 import Error404 from "../404";
 import Carousel from "../../components/Carousel";
 import Tag from "../../components/Tag";
@@ -9,9 +11,12 @@ import Dropdown from "../../components/Dropdown";
 import Rating from "../../components/Rating";
 
 function Apartment() {
+
     const {id} = useParams();
     const [hasError, setHasError] = useState(false)
     const [apartment, setApartment] = useState(null)
+
+    useDocumentTitle(apartment ? apartment.title : "Appartement")
 
     useEffect(() => {
         fetch('/data/apartments.json')
@@ -49,8 +54,8 @@ function Apartment() {
                     </div>
                 </div>
                 <div className={"apartment__dropdowns"}>
-                    <Dropdown content={apartment.description} title={"Description"} defaultOpen={true}/>
-                    <Dropdown content={apartment.equipments} title={"Equipements"} defaultOpen={true}/>
+                    <Dropdown content={apartment.description} title={"Description"} />
+                    <Dropdown content={apartment.equipments} title={"Equipements"} />
                 </div>
             </main>
         )

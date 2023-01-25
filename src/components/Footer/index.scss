@@ -1,6 +1,10 @@
 @use 'src/styles/colors';
+@use "src/styles/responsive";
 
 .footer {
+  @include responsive.mobile-only {
+    justify-content: center;
+  }
   width: 100%;
   height: 209px;
   background-color: map-get(colors.$colors, background-dark);
@@ -10,11 +14,19 @@
   align-items: center;
   padding: 29px;
   p {
+    @include responsive.mobile-only {
+      font-size: 0.66rem;
+    }
+    text-align: center;
     color: map-get(colors.$colors, text-light);
     font-size: 1.3rem;
   }
 
   .logo {
+    @include responsive.mobile-only {
+      flex-grow: 0;
+      padding: 12px;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
