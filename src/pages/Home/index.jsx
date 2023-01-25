@@ -1,12 +1,14 @@
-import './index.scss'
-import { useDocumentTitle } from "../../utils/hooks";
-import MainHeading from "../../components/MainHeading";
+import './index.scss';
 
-import headingBackground from './heading_bg.png'
-import Thumb from "../../components/Thumb";
+import { useDocumentTitle } from "../../utils/hooks";
 import {useEffect, useState} from "react";
-import Pagination from "../../components/Pagination";
 import {useNavigate, useSearchParams} from "react-router-dom";
+
+import MainHeading from "../../components/MainHeading";
+import Pagination from "../../components/Pagination";
+import Thumb from "../../components/Thumb";
+
+import headingBackground from './heading_bg.png';
 
 function Home() {
     useDocumentTitle('Accueil')

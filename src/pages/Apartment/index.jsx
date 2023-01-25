@@ -1,13 +1,14 @@
-import './index.scss'
+import './index.scss';
 
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {useDocumentTitle} from "../../utils/hooks";
+
 import Error404 from "../404";
 import Carousel from "../../components/Carousel";
 import Tag from "../../components/Tag";
 import Dropdown from "../../components/Dropdown";
 import Rating from "../../components/Rating";
-import {useDocumentTitle} from "../../utils/hooks";
 
 function Apartment() {
 

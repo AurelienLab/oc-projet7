@@ -1,5 +1,6 @@
-import './index.scss'
-import logo from './logo.svg'
+import './index.scss';
+
+import logo from './logo.svg';
 
 function Header(props) {
     return (

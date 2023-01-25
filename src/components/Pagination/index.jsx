@@ -1,4 +1,4 @@
-import './index.scss'
+import './index.scss';
 
 function Pagination({currentPage, setCurrentPage, nbPages}) {
     const pages = []

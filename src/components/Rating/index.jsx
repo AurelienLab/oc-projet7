@@ -1,7 +1,7 @@
-import './index.scss'
+import './index.scss';
 
-import starOn from './star_on.svg'
-import starOff from './star_off.svg'
+import starOn from './star_on.svg';
+import starOff from './star_off.svg';
 
 
 function Rating({value}) {

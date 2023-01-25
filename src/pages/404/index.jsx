@@ -1,6 +1,7 @@
-import './index.scss'
-import {Link} from "react-router-dom";
+import './index.scss';
+
 import {useDocumentTitle} from "../../utils/hooks";
+import {Link} from "react-router-dom";
 
 function Error404() {
     useDocumentTitle('Page introuvable')

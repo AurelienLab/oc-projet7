@@ -1,10 +1,11 @@
-import './index.scss'
+import './index.scss';
+
+import {useDocumentTitle} from "../../utils/hooks";
 
 import MainHeading from "../../components/MainHeading";
 import Dropdown from "../../components/Dropdown";
 
-import headingBackground from './heading_bg.png'
-import {useDocumentTitle} from "../../utils/hooks";
+import headingBackground from './heading_bg.png';
 
 function About() {
     useDocumentTitle('A propos')
