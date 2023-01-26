@@ -37,14 +37,13 @@ function Pagination({currentPage, setCurrentPage, nbPages}) {
             setCurrentPage(currentPage+1)
         }
     }
-    return (
+    return ( nbPages > 1 &&
         <div className={"pagination"}>
-            <button onClick={pageDown}>Précédent</button>
+            {currentPage > 0 && <button onClick={pageDown}>Précédent</button>}
             <ul className={"pagination__pagelist"}>
                 {pages}
             </ul>
-
-            <button onClick={pageUp}>Suivant</button>
+            {currentPage < nbPages-1 && <button onClick={pageUp}>Suivant</button>}
         </div>
     )
 }
